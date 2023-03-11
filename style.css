@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Smokum&family=Suravaram&family=Varela+Round&display=swap');
+
+body {
+    background-color: peachpuff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+
+    font-family: 'Suravaram', serif;
+    font-size: large;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+
+}
+
+.brand img {
+    width: 135px;
+    padding: 10px;
+    padding-top: 25px;
+}
+
+nav ul li {
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.container {
+    font-family: 'Varela Round', sans-serif;
+    min-height: 72vh;
+    background-color: rgb(67, 67, 67);
+    color: white;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 13px;
+    padding: 34px;
+    background-image: url('/assets/bg1.jpg');
+    background-size: contain;
+
+}
+
+.bottom {
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+.icons i {
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+
+}
+
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: rgba(119, 119, 119, 0.616);
+    /* width: 120%; */
+    margin: 12px 0px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.songItem img {
+    width: 50px;
+    margin: 0px 23px;
+    border-radius: 50px;
+}
+
+.timeStamp {
+    margin: 0 23px;
+}
+
+.timeStamp i {
+    /* margin: 0 23px; */
+    cursor: pointer;
+}
+
+.songItemContainer {
+    margin-top: 35px;
+}
+
+.songinfo {
+    position: absolute;
+    margin: 30px 0 0 0;
+    left: 10vw;
+}
+
+.songinfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
