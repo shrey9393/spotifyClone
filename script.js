@@ -58,13 +58,25 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element) =>
         // console.log(e.target);
         makeAllPlays()
         index = parseInt(e.target.id)
-        e.target.classList.remove("fa-play")
-        e.target.classList.add("fa-pause")
         audioElement.src = songs[index].filePath;
         audioElement.currentTime = 0;
         audioElement.play();
+        gif.style.opacity = 1;
+        if (audioElement.paused || audioElement.currentTime <= 0) {
+            audioElement.play();
+            e.target.classList.remove("fa-play")
+            e.target.classList.add("fa-pause")
+            gif.style.opacity = 1;
+        } else {
+            audioElement.pause();
+            e.target.classList.remove("fa-pause")
+            e.target.classList.add("fa-play")
+            gif.style.opacity = 0;
+        }
+        
         masterPlay.classList.remove("fa-play")
         masterPlay.classList.add("fa-pause")
+        masterSongName.innerText = songs[index].songName;
     })
 })
 document.getElementById("forward").addEventListener("click", () => {
